@@ -60,15 +60,20 @@ You can use one of the following methods:
 
 ### Docker
 
+Some configurations look in `docker-compose.yml`
+
+First start or after update:
 ```bash
-composer create-project ziishaned/opus
-cd opus
-cp .env.dist .env
-docker-compose up
-docker-compose exec app php artisan key:generate
-docker-compose exec app php artisan migrate
-docker run -v "$PWD":/var/www/ opus_app /usr/local/bin/composer install
+$ docker-compose up --build
 ```
+
+If you changed only some `environment` settings in docker-compose.yml:
+
+```bash
+$ docker-compose up
+```
+
+After success start docker site will be available on http://localhost:8000
 
 ### Localhost
 

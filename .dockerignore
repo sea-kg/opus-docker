@@ -1,8 +1,11 @@
 *.docker
 *.log
 *.md
-.env.dist
 .gitattributes
 .gitignore
+Dockerfile
+dckr_mysql_data
 *.yml
 phpunit.xml
+vendor
+composer.lock
